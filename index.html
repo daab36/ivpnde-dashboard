@@ -131,8 +131,8 @@ body{font-family:'Nunito Sans','Segoe UI',system-ui,sans-serif;background:#fff;c
 </div>
 
 <section class="search-hero">
-  <div class="hero-badge">Motor de Búsqueda · 1,698 Foros Educativos</div>
-  <h2>Consulta los foros del <em>IV PNDE 2026–2035</em></h2>
+  <div class="hero-badge">Motor de Búsqueda · Espacios de Participación</div>
+  <h2>Consulta los espacios de participación del <em>IV PNDE 2026–2035</em></h2>
   <p>Busca por institución, propuesta, desafío o tema en los resúmenes territoriales</p>
   <div class="search-row">
     <input type="text" class="search-input" id="sI"
@@ -143,8 +143,6 @@ body{font-family:'Nunito Sans','Segoe UI',system-ui,sans-serif;background:#fff;c
 </section>
 
 <div class="stats-bar">
-  <div class="stat"><span class="stat-n">1,698</span><span class="stat-l">foros registrados</span></div>
-  <span class="stat-sep">·</span>
   <div class="stat"><span class="stat-n">30</span><span class="stat-l">departamentos</span></div>
   <span class="stat-sep">·</span>
   <div class="stat"><span class="stat-n">6</span><span class="stat-l">regiones MEN</span></div>
@@ -237,7 +235,7 @@ function buscar(){
     if(!conc) conc=r.rs;
     return '<div class="rc" onclick="openM('+realIdx+')">'
       +'<div class="rc-head"><div class="rc-title">'+hl(inst,terms)+'</div><span class="bdg bdg-d">'+r.dp+'</span></div>'
-      +'<div class="rc-meta">📍 '+r.mn+' · '+r.rg+' · <span class="bdg bdg-e">'+r.ev+'</span></div>'
+      +'<div class="rc-meta">📍 '+r.mn+' · '+r.rg+'</div>'
       +'<div class="rc-body">'+hl(conc,terms)+'...</div>'
       +'</div>';
   }).join('');
@@ -262,11 +260,10 @@ function openM(idx){
     +'<div><div class="ml">Departamento</div><div class="mv"><strong>'+r.dp+'</strong></div></div>'
     +'<div><div class="ml">Municipio</div><div class="mv">'+r.mn+'</div></div>'
     +'<div><div class="ml">Región MEN</div><div class="mv"><span class="bdg bdg-d">'+r.rg+'</span></div></div>'
-    +'<div><div class="ml">Tipo Evento</div><div class="mv"><span class="bdg bdg-e">'+r.ev+'</span></div></div>'
     +'<div><div class="ml">COD DANE Dpto</div><div class="mv"><code>'+r.cod+'</code></div></div>'
     +'<div><div class="ml">COD DANE Mpio</div><div class="mv"><code>'+r.mc+'</code></div></div>'
     +'</div>'
-    +'<div class="mdiv"><div class="ml" style="margin-bottom:10px">📝 Resumen del Foro</div>'+nb+'</div>';
+    +'<div class="mdiv"><div class="ml" style="margin-bottom:10px">📝 Resumen</div>'+nb+'</div>';
   document.getElementById('ov').classList.add('open');
 }
 function covd(){document.getElementById('ov').classList.remove('open');}
